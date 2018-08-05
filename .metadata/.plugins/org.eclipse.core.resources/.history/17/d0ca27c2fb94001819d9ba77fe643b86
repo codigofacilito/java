@@ -1,0 +1,27 @@
+package main;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> numeros = new ArrayList<Integer>() 
+		{{
+			add(1);
+			add(2);
+			add(3);
+			add(4);
+			add(5);
+		}};
+		
+		for(int numero : numeros) {
+			if(numero == 5)
+				System.out.println("El 9 existe en el arreglo");
+		}
+		
+		System.out.println("¿El 5 existe en el arreglo ?" + numeros.contains(9));
+
+	}
+
+}

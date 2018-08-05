@@ -1,0 +1,21 @@
+package main;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> numero = new ArrayList<Integer>(8);
+		
+		for(int numero : numeros) {
+			if(numero == 9)
+				System.out.println("El 9 existe en el arreglo");
+		}
+		String colores[];
+		
+		System.out.println("¿El 9 existe en el arreglo ?" + numeros.contains(9));
+
+	}
+
+}

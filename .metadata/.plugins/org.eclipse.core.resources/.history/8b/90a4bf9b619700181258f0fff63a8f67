@@ -1,0 +1,58 @@
+package main;
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> paises = new ArrayList<String>();
+		paises.add("Francia");
+		paises.add("España");
+		paises.add("Alemania");
+		paises.add("México");
+			
+		long cantidad = paises.stream()
+				.filter(pais -> true)
+				.count();
+		
+		paises.stream().filter(pais -> {
+			System.out.println(pais);
+			return true;
+		});//.count();
+		
+		//System.out.println(cantidad);
+		
+		
+		List<String> p = paises.stream().sorted().collect(Collectors.toList());
+		
+		paises.stream().sorted().map(x -> x.toUpperCase()).forEach(x -> { System.out.println(x); });
+		
+		//p.stream().forEach(x -> System.out.println(x));
+		
+		int suma =  Stream.of(1,2,3,4,4).distinct().mapToInt(i -> i.intValue()).sum();
+		System.out.println(suma);
+		
+		Stream.of(1,2,3,4,4).findAny().isPresent();
+		
+		ArrayList<Integer> numeros = new ArrayList<Integer>();
+		numeros.add(1);
+		numeros.add(2);
+		numeros.add(3);
+		numeros.add(4);
+		numeros.add(5);
+		numeros.add(6);
+		numeros.add(7);
+		numeros.add(8);
+		numeros.add(9);
+		
+		int totalSuma = numeros.stream().filter(numero -> numero > 8).mapToInt(numero -> numero * 10).sum();
+		System.out.println(totalSuma);
+		
+		int contador = numeros.stream().map(x -> x * 10).filter(x -> x > 10).count();
+				System.out.println(contador);
+	}
+
+}
